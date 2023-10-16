@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="homepage.html" style="float: left; margin-right: 0.5em;"> 
+                <img src="Logo.PNG" alt="Logo" width="180" height="50" >
+            </a>
+            <ul>
+                <li style="margin-top: 50%;";><a href="homepage.html" style="color: white;">Home</a></li>
+                <li><a href="project.html" style="color: white;">Projects</a></li>
+                <li><a href="cv.html" style="color: white;">CV</a></li>
+                <li><a href="contact.html" style="color: white;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="B">
+        <h1 style="text-align: center; font-size: xx-large; text-decoration: underline;">Description</h1>
+        <p style="font-size: x-large;">Welcome to my projects section. Here, you'll find some of my works in the fields of AI (python) and some C++ projects.  These projects serve as a testament to my skills and creativity, reflecting my passion for combining cutting-edge technology with innovative design. Explore these examples to gain insights into the depth and breadth of my capabilities, and envision the unique solutions I can bring to your next project.</p>
+        <section style="margin-bottom: 16pc;">
+            <h1 id="project-heading" style="font-size: x-large;">Select a Project</h1>
+            <p id="project-description" style="font-size: large;">Choose a project from the list below to see details.</p>
+            <p id="project-github" style="display: none;"><a href="#" target="_blank">GitHub Link</a></p>
+            <section class="project-selection">
+                <div class="container">
+                    <select class="form-control" id="project-select" style="width: 50pc; height: 50px;">
+                        <option value="all" data-description="" data-github="" style="text-align: center;">Select a Project</option>
+                        <option value="cpp" data-description="C++ Project Description: This project is a console-based 1024 game that provides an engaging challenge for players. The objective is to strategically merge tiles to achieve the coveted 1024 tile, followed by multiples of 1024, each representing a significant milestone in your progression. As you progress, the intensity of the game escalates, with each successive multiple of 1024 requiring not only skill but also a keen sense of strategy. The game offers a thrilling and rewarding experience as you work your way through the numerical cascade, testing your problem-solving abilities" data-github="https://github.com/faheemmahmood/assignments--comp295--fccu" style="text-align: center;">C++ Project</option>
+                        <option value="python" data-description="Python Project Description: This project is sentimental analysis of people on Russia-Ukraine war over social media (twitter), it helps us understand the public opinion on this war through machine learning techniques using datasets of tweets." data-github="https://github.com/faheemmahmood/Python-AI-Project" style="text-align: center;">Python Project</option>
+                    </select>
+                    <input type="button" value="Enter" style="width: 100px; height: 50px;" onclick="showProjectInfo()">
+                </div>
+            </section>
+        </section>
+    </section>
+    <footer style="margin: 0;">
+        &copy; 2023 Faheem's Portfolio
+    </footer>
+    <script style="text-align: end;">
+        // JavaScript code to toggle visibility of project info
+        function showProjectInfo() {
+            const selectedOption = document.getElementById("project-select").options[document.getElementById("project-select").selectedIndex];
+            document.getElementById("project-heading").innerText = selectedOption.innerText;
+            document.getElementById("project-description").innerText = selectedOption.getAttribute("data-description");
+            const githubLink = selectedOption.getAttribute("data-github");
+            const projectGitHub = document.getElementById("project-github");
+            if (githubLink) {
+                projectGitHub.style.display = "block";
+                projectGitHub.children[0].href = githubLink;
+            } else {
+                projectGitHub.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

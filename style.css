@@ -1,0 +1,90 @@
+/* Add your custom styles here */
+
+body {
+    font-family:  'Times New Roman';
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #69004a;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+nav ul {
+    margin-top: 10px;
+    padding: 0;
+}
+
+nav ul li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    display: inline;
+    margin: 0 80px;
+    color: #fff;
+}
+
+
+.hero {
+    background: url('mypic.png') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(184, 184, 216);
+}
+
+.about{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(104, 199, 104);
+}
+.A{
+    background-color: rgb(238, 85, 85);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.B{
+    
+    margin: 0 auto;
+    padding: 20px;
+    background-color:  rgb(104, 199, 104);
+}
+.C{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:  rgb(184, 184, 216);
+}
+.D{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:  rgb(238, 85, 85);
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    margin: 0 ;
+}
